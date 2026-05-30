@@ -59,11 +59,26 @@ export default function Home() {
           </CardContent>
         </Card>
 
-        <div className="w-full max-w-xl flex justify-end">
-          <Button variant="ghost" className="wallet-connect">
-            Connect Wallet
-          </Button>
-        </div>
+        <section
+          className="wallet-connect w-full max-w-xl rounded-lg border border-zinc-200 bg-white p-4 text-sm text-zinc-700 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300"
+          aria-label="Wallet privacy information"
+        >
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <div className="space-y-1">
+              <p className="font-medium text-zinc-900 dark:text-zinc-100">
+                Connect wallet
+              </p>
+              <p>
+                We only show a shortened wallet address in the app. Transactions
+                you sign on Stellar may still be visible on the public chain.
+              </p>
+            </div>
+            <Button variant="ghost">Connect Wallet</Button>
+          </div>
+          <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">
+            xConfess will never ask you to paste private wallet recovery details.
+          </p>
+        </section>
 
         <ErrorBoundary>
           <Header />
